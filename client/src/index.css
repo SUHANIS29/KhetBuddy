@@ -1,0 +1,102 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 98%;
+    --foreground: 0 0% 26%;
+    
+    --card: 0 0% 100%;
+    --card-foreground: 0 0% 26%;
+    
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 26%;
+    
+    --primary: 122 39% 34%;
+    --primary-foreground: 0 0% 100%;
+    
+    --secondary: 20 25% 39%;
+    --secondary-foreground: 0 0% 100%;
+    
+    --muted: 0 0% 88%;
+    --muted-foreground: 0 0% 46%;
+    
+    --accent: 42 100% 50%;
+    --accent-foreground: 0 0% 12%;
+    
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+    
+    --border: 0 0% 88%;
+    --input: 0 0% 88%;
+    --ring: 122 39% 34%;
+    
+    --radius: 0.5rem;
+
+    /* Chart colors */
+    --chart-1: 0 84% 60%;
+    --chart-2: 220 83% 51%;
+    --chart-3: 122 39% 34%;
+    --chart-4: 42 100% 50%;
+    --chart-5: 20 25% 39%;
+  }
+  
+  * {
+    @apply border-border;
+  }
+  
+  body {
+    @apply bg-background text-foreground font-sans;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-sans font-bold;
+  }
+}
+
+@layer components {
+  /* Card styles */
+  .dashboard-card {
+    @apply bg-white rounded-lg shadow-md p-5 border-l-4;
+  }
+
+  .dashboard-card-success {
+    @apply border-[#388E3C];
+  }
+
+  .dashboard-card-info {
+    @apply border-[#1976D2];
+  }
+
+  .dashboard-card-accent {
+    @apply border-[#FFB300];
+  }
+
+  /* Marketplace listing styles */
+  .listing-card {
+    @apply border border-gray-200 rounded-lg p-4 hover:shadow-md transition duration-300;
+  }
+
+  /* Button styles */
+  .btn-primary {
+    @apply bg-primary text-white py-2 px-4 rounded-md font-semibold hover:bg-[#1B5E20] transition duration-300;
+  }
+
+  .btn-outline {
+    @apply bg-white border border-primary text-primary py-2 px-4 rounded-md font-semibold hover:bg-primary hover:bg-opacity-10 transition duration-300;
+  }
+
+  /* Badge styles */
+  .badge {
+    @apply text-xs px-2 py-1 rounded-md;
+  }
+
+  .badge-success {
+    @apply bg-[#388E3C] text-white;
+  }
+
+  .badge-neutral {
+    @apply bg-gray-50 text-gray-800 border border-gray-200;
+  }
+}
